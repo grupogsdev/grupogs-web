@@ -35,3 +35,17 @@ export const cotizaciones = pgTable("cotizaciones", {
 });
 
 export type Cotizacion = typeof cotizaciones.$inferSelect;
+
+export const posts = pgTable("posts", {
+  id: serial("id").primaryKey(),
+  slug: text("slug").notNull().unique(),
+  title: text("title").notNull(),
+  excerpt: text("excerpt"),
+  content: text("content").notNull(),
+  imageUrl: text("image_url"),
+  published: text("published").notNull().default("draft"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
+export type Post = typeof posts.$inferSelect;

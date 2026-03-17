@@ -3,8 +3,22 @@ import { SITE, SERVICES, COLORS, TESTIMONIALS, CLIENT_LOGOS } from "@/lib/consta
 import { Bug, Droplets, ArrowRight } from "lucide-react";
 import { Testimonials } from "@/components/Testimonials";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { db } from "@/lib/db";
+import { posts } from "@/lib/db/schema";
+import { eq, desc } from "drizzle-orm";
 
-export default function Home() {
+async function getLatestPosts() {
+  if (!db) return [];
+  return db
+    .select({ slug: posts.slug, title: posts.title, createdAt: posts.createdAt })
+    .from(posts)
+    .where(eq(posts.published, "published"))
+    .orderBy(desc(posts.createdAt))
+    .limit(3);
+}
+
+export default async function Home() {
+  const latestPosts = await getLatestPosts();
   return (
     <>
       <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-28">
@@ -189,20 +203,22 @@ export default function Home() {
             <p className="text-gray-600 max-w-2xl mx-auto">Consejos, noticias e ideas para tu hogar y oficina</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {[
-              { slug: "prevencion-control-plagas", title: "Prevención y control de plagas", date: "15 Ago 2020" },
-              { slug: "plagas-historia", title: "Las plagas en la historia", date: "12 Jul 2020" },
-              { slug: "limpiar-hogar", title: "El secreto de limpiar su hogar", date: "26 May 2020" },
-            ].map((p) => (
-              <Link
-                key={p.slug}
-                href={`/blog/${p.slug}`}
-                className="block p-5 rounded-xl border border-gray-200 hover:border-[var(--primary)] hover:shadow-lg transition"
-              >
-                <p className="text-xs text-gray-500 mb-2">{p.date}</p>
-                <h3 className="font-bold text-gray-900">{p.title}</h3>
-              </Link>
-            ))}
+            {latestPosts.length === 0 ? (
+              <p className="col-span-3 text-center text-gray-500 py-8">Próximamente artículos del blog.</p>
+            ) : (
+              latestPosts.map((p) => (
+                <Link
+                  key={p.slug}
+                  href={`/blog/${p.slug}`}
+                  className="block p-5 rounded-xl border border-gray-200 hover:border-[var(--primary)] hover:shadow-lg transition"
+                >
+                  <p className="text-xs text-gray-500 mb-2">
+                    {new Date(p.createdAt).toLocaleDateString("es-CO", { day: "numeric", month: "short", year: "numeric" })}
+                  </p>
+                  <h3 className="font-bold text-gray-900">{p.title}</h3>
+                </Link>
+              ))
+            )}
           </div>
           <div className="text-center">
             <Link

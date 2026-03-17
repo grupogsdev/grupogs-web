@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
+import { PostsTable } from "@/components/PostsTable";
 
 export default async function AdminBlogPage() {
   const cookieStore = await cookies();
@@ -8,8 +9,11 @@ export default async function AdminBlogPage() {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Blog</h2>
-      <p className="text-gray-600">Gestion de articulos proximamente.</p>
+      <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--primary)" }}>Blog</h2>
+      <p className="text-gray-600 mb-6">
+        Gestiona los artículos y noticias del blog
+      </p>
+      <PostsTable />
     </div>
   );
 }
