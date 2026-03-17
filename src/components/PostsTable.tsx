@@ -48,14 +48,14 @@ export function PostsTable() {
     fetchPosts();
   }, [fetchPosts]);
 
-  function handleSort(key: keyof SortConfig["key"]) {
+  function handleSort(key: "title" | "slug" | "createdAt") {
     setSortConfig((prev) => ({
       key,
       order: prev.key === key && prev.order === "asc" ? "desc" : "asc",
     }));
   }
 
-  function SortIcon({ column }: { column: keyof SortConfig["key"] }) {
+  function SortIcon({ column }: { column: "title" | "slug" | "createdAt" }) {
     if (sortConfig.key !== column) return null;
     return sortConfig.order === "asc" ? (
       <ChevronUp size={16} className="inline ml-1" />
