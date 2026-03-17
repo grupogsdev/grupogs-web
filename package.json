@@ -6,10 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "@vercel/blob": "^2.3.1",
+    "better-auth": "^1.5.5",
+    "drizzle-kit": "^0.31.10",
+    "drizzle-orm": "^0.45.1",
+    "lucide-react": "^0.577.0",
     "next": "16.1.7",
+    "openai": "^6.31.0",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
