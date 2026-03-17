@@ -117,15 +117,15 @@ export function CotizacionesTable() {
 
   return (
     <>
-      <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+      <div className="overflow-x-auto rounded-xl border-2 bg-white shadow-sm" style={{ borderColor: "var(--primary)" }}>
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b border-gray-200 bg-gray-50">
+            <tr className="border-b-2 text-white" style={{ backgroundColor: "var(--primary)" }}>
               <th className="text-left py-3 px-4">
                 <button
                   type="button"
                   onClick={() => handleSort("nombre")}
-                  className="font-semibold text-gray-700 hover:text-[var(--primary)] flex items-center"
+                  className="font-semibold hover:opacity-90 flex items-center"
                 >
                   Nombre
                   <SortIcon column="nombre" />
@@ -135,7 +135,7 @@ export function CotizacionesTable() {
                 <button
                   type="button"
                   onClick={() => handleSort("email")}
-                  className="font-semibold text-gray-700 hover:text-[var(--primary)] flex items-center"
+                  className="font-semibold hover:opacity-90 flex items-center"
                 >
                   Email
                   <SortIcon column="email" />
@@ -145,24 +145,24 @@ export function CotizacionesTable() {
                 <button
                   type="button"
                   onClick={() => handleSort("telefono")}
-                  className="font-semibold text-gray-700 hover:text-[var(--primary)] flex items-center"
+                  className="font-semibold hover:opacity-90 flex items-center"
                 >
                   Teléfono
                   <SortIcon column="telefono" />
                 </button>
               </th>
-              <th className="text-left py-3 px-4 font-semibold text-gray-700">Servicio</th>
+              <th className="text-left py-3 px-4 font-semibold">Servicio</th>
               <th className="text-left py-3 px-4">
                 <button
                   type="button"
                   onClick={() => handleSort("createdAt")}
-                  className="font-semibold text-gray-700 hover:text-[var(--primary)] flex items-center"
+                  className="font-semibold hover:opacity-90 flex items-center"
                 >
                   Fecha
                   <SortIcon column="createdAt" />
                 </button>
               </th>
-              <th className="text-right py-3 px-4 font-semibold text-gray-700">Acciones</th>
+              <th className="text-right py-3 px-4 font-semibold">Acciones</th>
             </tr>
           </thead>
           <tbody>
@@ -174,7 +174,7 @@ export function CotizacionesTable() {
               </tr>
             ) : (
               cotizaciones.map((cot) => (
-                <tr key={cot.id} className="border-b border-gray-100 hover:bg-gray-50">
+                <tr key={cot.id} className="border-b border-gray-100 hover:bg-[var(--primary)]/5 transition">
                   <td className="py-3 px-4">{cot.nombre}</td>
                   <td className="py-3 px-4">{cot.email}</td>
                   <td className="py-3 px-4">{cot.telefono}</td>

@@ -23,19 +23,19 @@ export default async function AdminLayout({
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex">
+    <div className="min-h-screen flex" style={{ backgroundColor: "#f0fdf4" }}>
       {isAuth && (
-        <aside className="w-56 bg-white border-r border-gray-200 flex-shrink-0 hidden md:block">
+        <aside className="w-56 flex-shrink-0 hidden md:block border-r border-[var(--primary)]/20" style={{ backgroundColor: "#dcfce7" }}>
           <div className="sticky top-0 py-4">
             <Link href="/admin/dashboard" className="px-4 block mb-4">
-              <span className="text-lg font-bold text-gray-900">Panel Grupo GS</span>
+              <span className="text-lg font-bold" style={{ color: "var(--primary)" }}>Panel Grupo GS</span>
             </Link>
             <nav className="space-y-1 px-2">
               {adminNav.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-[var(--primary)] transition"
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:bg-[var(--primary)]/15 hover:text-[var(--primary)] transition font-medium"
                 >
                   <item.icon size={18} />
                   {item.label}
@@ -46,15 +46,19 @@ export default async function AdminLayout({
         </aside>
       )}
       <div className="flex-1 flex flex-col min-w-0">
-        <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <header className="sticky top-0 z-50 border-b-2" style={{ backgroundColor: "var(--primary)", borderColor: "var(--secondary)" }}>
           <div className="px-4 py-3 flex justify-between items-center">
-            <span className="font-semibold text-gray-900 md:hidden">Panel Grupo GS</span>
-            <div className="flex items-center gap-4 ml-auto">
-              <Link href="/" target="_blank" className="flex items-center gap-1 text-sm text-gray-600 hover:text-[var(--primary)]">
+            <span className="font-semibold text-white md:hidden">Panel Grupo GS</span>
+            <div className="flex items-center gap-4 ml-auto text-white">
+              <Link href="/" target="_blank" className="flex items-center gap-1 text-sm text-white/90 hover:text-white transition">
                 <ExternalLink size={16} />
                 Ver sitio
               </Link>
-              {isAuth && <LogoutButton />}
+              {isAuth && (
+                <span className="[&_button]:text-white/90 [&_button]:hover:text-white [&_button]:text-sm">
+                  <LogoutButton />
+                </span>
+              )}
             </div>
           </div>
         </header>

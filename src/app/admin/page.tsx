@@ -36,8 +36,8 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center px-4">
-      <div className="w-full max-w-md p-8 rounded-2xl border border-gray-200 bg-white shadow-lg">
+    <div className="min-h-[80vh] flex items-center justify-center px-4" style={{ backgroundColor: "#f0fdf4" }}>
+      <div className="w-full max-w-md p-8 rounded-2xl border-2 bg-white shadow-lg" style={{ borderColor: "var(--primary)" }}>
         <div className="flex items-center gap-2 mb-6">
           <Lock size={28} className="text-[var(--primary)]" />
           <h1 className="text-2xl font-bold text-gray-900">Panel de administración</h1>

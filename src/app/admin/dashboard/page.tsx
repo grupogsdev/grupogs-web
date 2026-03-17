@@ -12,54 +12,72 @@ export default async function AdminDashboardPage() {
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Dashboard</h2>
+        <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--primary)" }}>Dashboard</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <Link
             href="/admin/dashboard/contenido"
-            className="p-6 rounded-xl border border-gray-200 bg-white hover:border-[var(--primary)] hover:shadow-lg transition"
+            className="p-6 rounded-xl border-2 bg-white hover:shadow-lg transition group"
+            style={{ borderColor: "var(--primary)", boxShadow: "0 0 0 1px rgba(0,166,81,0.1)" }}
           >
-            <FileText size={32} className="text-[var(--primary)] mb-3" />
-            <h3 className="font-bold text-gray-900">Contenido</h3>
+            <div className="p-2 rounded-lg w-fit mb-3" style={{ backgroundColor: "var(--primary)" }}>
+              <FileText size={28} className="text-white" />
+            </div>
+            <h3 className="font-bold text-gray-900 group-hover:text-[var(--primary)] transition">Contenido</h3>
             <p className="text-sm text-gray-600 mt-1">Editar textos y páginas</p>
           </Link>
           <Link
             href="/admin/dashboard/galeria"
-            className="p-6 rounded-xl border border-gray-200 bg-white hover:border-[var(--primary)] hover:shadow-lg transition"
+            className="p-6 rounded-xl border-2 bg-white hover:shadow-lg transition group"
+            style={{ borderColor: "var(--primary)", boxShadow: "0 0 0 1px rgba(0,166,81,0.1)" }}
           >
-            <Image size={32} className="text-[var(--primary)] mb-3" />
-            <h3 className="font-bold text-gray-900">Galería</h3>
+            <div className="p-2 rounded-lg w-fit mb-3" style={{ backgroundColor: "var(--primary)" }}>
+              <Image size={28} className="text-white" />
+            </div>
+            <h3 className="font-bold text-gray-900 group-hover:text-[var(--primary)] transition">Galería</h3>
             <p className="text-sm text-gray-600 mt-1">Gestionar imágenes</p>
           </Link>
           <Link
             href="/admin/dashboard/blog"
-            className="p-6 rounded-xl border border-gray-200 bg-white hover:border-[var(--primary)] hover:shadow-lg transition"
+            className="p-6 rounded-xl border-2 bg-white hover:shadow-lg transition group"
+            style={{ borderColor: "var(--primary)", boxShadow: "0 0 0 1px rgba(0,166,81,0.1)" }}
           >
-            <LayoutDashboard size={32} className="text-[var(--primary)] mb-3" />
-            <h3 className="font-bold text-gray-900">Blog</h3>
+            <div className="p-2 rounded-lg w-fit mb-3" style={{ backgroundColor: "var(--secondary)" }}>
+              <LayoutDashboard size={28} className="text-gray-900" />
+            </div>
+            <h3 className="font-bold text-gray-900 group-hover:text-[var(--primary)] transition">Blog</h3>
             <p className="text-sm text-gray-600 mt-1">Artículos y noticias</p>
           </Link>
           <Link
             href="/admin/dashboard/bot"
-            className="p-6 rounded-xl border border-gray-200 bg-white hover:border-[var(--primary)] hover:shadow-lg transition"
+            className="p-6 rounded-xl border-2 bg-white hover:shadow-lg transition group"
+            style={{ borderColor: "var(--primary)", boxShadow: "0 0 0 1px rgba(0,166,81,0.1)" }}
           >
-            <Bot size={32} className="text-[var(--primary)] mb-3" />
-            <h3 className="font-bold text-gray-900">Chat Bot</h3>
+            <div className="p-2 rounded-lg w-fit mb-3" style={{ backgroundColor: "var(--primary)" }}>
+              <Bot size={28} className="text-white" />
+            </div>
+            <h3 className="font-bold text-gray-900 group-hover:text-[var(--primary)] transition">Chat Bot</h3>
             <p className="text-sm text-gray-600 mt-1">Nombre, entrenamiento y configuración</p>
           </Link>
           <Link
             href="/admin/dashboard/leads"
-            className="p-6 rounded-xl border border-gray-200 bg-white hover:border-[var(--primary)] hover:shadow-lg transition"
+            className="p-6 rounded-xl border-2 bg-white hover:shadow-lg transition group"
+            style={{ borderColor: "var(--primary)", boxShadow: "0 0 0 1px rgba(0,166,81,0.1)" }}
           >
-            <Users size={32} className="text-[var(--primary)] mb-3" />
-            <h3 className="font-bold text-gray-900">Leads</h3>
+            <div className="p-2 rounded-lg w-fit mb-3" style={{ backgroundColor: "var(--primary)" }}>
+              <Users size={28} className="text-white" />
+            </div>
+            <h3 className="font-bold text-gray-900 group-hover:text-[var(--primary)] transition">Leads</h3>
             <p className="text-sm text-gray-600 mt-1">Contactos del formulario</p>
           </Link>
           <Link
             href="/admin/dashboard/cotizaciones"
-            className="p-6 rounded-xl border border-gray-200 bg-white hover:border-[var(--primary)] hover:shadow-lg transition"
+            className="p-6 rounded-xl border-2 bg-white hover:shadow-lg transition group"
+            style={{ borderColor: "var(--primary)", boxShadow: "0 0 0 1px rgba(0,166,81,0.1)" }}
           >
-            <FileCheck size={32} className="text-[var(--primary)] mb-3" />
-            <h3 className="font-bold text-gray-900">Cotizaciones</h3>
+            <div className="p-2 rounded-lg w-fit mb-3" style={{ backgroundColor: "var(--secondary)" }}>
+              <FileCheck size={28} className="text-gray-900" />
+            </div>
+            <h3 className="font-bold text-gray-900 group-hover:text-[var(--primary)] transition">Cotizaciones</h3>
             <p className="text-sm text-gray-600 mt-1">Solicitudes de cotización</p>
           </Link>
         </div>

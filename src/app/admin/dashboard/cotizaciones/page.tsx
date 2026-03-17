@@ -9,7 +9,7 @@ export default async function AdminCotizacionesPage() {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold text-gray-900 mb-2">Cotizaciones</h2>
+      <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--primary)" }}>Cotizaciones</h2>
       <p className="text-gray-600 mb-6">
         Solicitudes de cotización desde el formulario
       </p>
