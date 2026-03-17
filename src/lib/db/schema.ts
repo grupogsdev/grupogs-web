@@ -20,3 +20,18 @@ export const botConfig = pgTable("bot_config", {
 });
 
 export type BotConfig = typeof botConfig.$inferSelect;
+
+export const cotizaciones = pgTable("cotizaciones", {
+  id: serial("id").primaryKey(),
+  tipo: text("tipo").notNull(),
+  servicio: text("servicio").notNull(),
+  ciudad: text("ciudad").notNull(),
+  descripcion: text("descripcion").notNull(),
+  frecuencia: text("frecuencia").notNull(),
+  nombre: text("nombre").notNull(),
+  email: text("email").notNull(),
+  telefono: text("telefono").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export type Cotizacion = typeof cotizaciones.$inferSelect;

@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import Link from "next/link";
-import { LayoutDashboard, FileText, Image, Bot, Users } from "lucide-react";
+import { LayoutDashboard, FileText, Image, Bot, Users, FileCheck } from "lucide-react";
 
 export default async function AdminDashboardPage() {
   const cookieStore = await cookies();
@@ -53,6 +53,14 @@ export default async function AdminDashboardPage() {
             <Users size={32} className="text-[var(--primary)] mb-3" />
             <h3 className="font-bold text-gray-900">Leads</h3>
             <p className="text-sm text-gray-600 mt-1">Contactos del formulario</p>
+          </Link>
+          <Link
+            href="/admin/dashboard/cotizaciones"
+            className="p-6 rounded-xl border border-gray-200 bg-white hover:border-[var(--primary)] hover:shadow-lg transition"
+          >
+            <FileCheck size={32} className="text-[var(--primary)] mb-3" />
+            <h3 className="font-bold text-gray-900">Cotizaciones</h3>
+            <p className="text-sm text-gray-600 mt-1">Solicitudes de cotización</p>
           </Link>
         </div>
     </main>

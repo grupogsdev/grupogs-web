@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cookies } from "next/headers";
 import { LogoutButton } from "@/components/LogoutButton";
-import { LayoutDashboard, FileText, Image, Bot, Users, ExternalLink, Newspaper } from "lucide-react";
+import { LayoutDashboard, FileText, Image, Bot, Users, ExternalLink, Newspaper, FileCheck } from "lucide-react";
 
 export default async function AdminLayout({
   children,
@@ -19,6 +19,7 @@ export default async function AdminLayout({
     { href: "/admin/dashboard/blog", label: "Blog", icon: Newspaper },
     { href: "/admin/dashboard/bot", label: "Chat Bot", icon: Bot },
     { href: "/admin/dashboard/leads", label: "Leads", icon: Users },
+    { href: "/admin/dashboard/cotizaciones", label: "Cotizaciones", icon: FileCheck },
   ];
 
   return (

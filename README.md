@@ -31,26 +31,35 @@ Abre [http://localhost:3000](http://localhost:3000)
 
 ## Deploy
 
+### Variables de entorno (Vercel)
+
+Configuradas en Vercel Dashboard > Settings > Environment Variables:
+
+| Variable | Descripción |
+|----------|-------------|
+| `ADMIN_EMAIL` | Email del admin |
+| `ADMIN_PASSWORD` | Contraseña del admin |
+| `DATABASE_URL` | Neon PostgreSQL (leads, bot config) |
+| `BLOB_READ_WRITE_TOKEN` | Vercel Blob (imágenes) |
+| `OPENAI_API_KEY` | **Requerido para el chat bot** - agregar en Vercel |
+
 ### Pre-deploy (verificar)
 
 ```bash
 npm run build
 ```
 
-### Vercel
-
-1. Conectar repo con GitHub
-2. Importar proyecto en [vercel.com](https://vercel.com)
-3. Variables de entorno: `ADMIN_EMAIL`, `ADMIN_PASSWORD`
-4. Dominio: grupogscol.com
-
-### CLI
+### Vercel CLI
 
 ```bash
-npm i -g vercel
 vercel login
-vercel
 vercel --prod
+```
+
+### Migraciones (Neon)
+
+```bash
+DATABASE_URL="postgresql://..." npm run db:push
 ```
 
 ## Estructura

@@ -3,6 +3,27 @@
 import { useState } from "react";
 import { SERVICES, COLORS } from "@/lib/constants";
 
+function generateCaptcha(): { question: string; answer: number } {
+  const ops = [
+    () => {
+      const a = Math.floor(Math.random() * 9) + 1;
+      const b = Math.floor(Math.random() * 9) + 1;
+      return { question: `${a} + ${b}`, answer: a + b };
+    },
+    () => {
+      const a = Math.floor(Math.random() * 9) + 5;
+      const b = Math.floor(Math.random() * 4) + 1;
+      return { question: `${a} - ${b}`, answer: a - b };
+    },
+    () => {
+      const a = Math.floor(Math.random() * 5) + 2;
+      const b = Math.floor(Math.random() * 5) + 2;
+      return { question: `${a} × ${b}`, answer: a * b };
+    },
+  ];
+  return ops[Math.floor(Math.random() * ops.length)]();
+}
+
 const TIPOS = ["Empresa", "Casa", "Apartamento", "Otro"] as const;
 const CIUDADES = [
   "Barranquilla",
@@ -18,22 +39,34 @@ const FRECUENCIAS = ["Única", "Mensual", "Trimestral", "Anual"] as const;
 
 export function CotizacionForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [captcha, setCaptcha] = useState(() => generateCaptcha());
+  const resetCaptcha = () => setCaptcha(generateCaptcha());
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const data = {
+      ...Object.fromEntries(formData),
+      captchaAnswer: formData.get("captchaAnswer"),
+      captchaExpected: captcha.answer,
+    };
     try {
       const res = await fetch("/api/cotizacion", {
         method: "POST",
-        body: JSON.stringify(Object.fromEntries(formData)),
+        body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" },
       });
+      const json = await res.json();
       if (res.ok) {
         setStatus("success");
         form.reset();
-      } else setStatus("error");
+        resetCaptcha();
+      } else {
+        setStatus("error");
+        if (json?.error?.includes("captcha")) resetCaptcha();
+      }
     } catch {
       setStatus("error");
     }
@@ -126,6 +159,20 @@ export function CotizacionForm() {
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[var(--primary)]"
         />
       </div>
+      <div>
+        <label htmlFor="captchaAnswer" className="block text-sm font-medium text-gray-700 mb-2">
+          ¿Cuánto es {captcha.question}? *
+        </label>
+        <input
+          id="captchaAnswer"
+          name="captchaAnswer"
+          type="number"
+          required
+          min={0}
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[var(--primary)]"
+          placeholder="Respuesta"
+        />
+      </div>
       <div className="flex items-start gap-2">
         <input
           id="politica"
@@ -145,7 +192,7 @@ export function CotizacionForm() {
         <p className="text-green-600 font-medium">Cotización enviada. Te contactaremos pronto.</p>
       )}
       {status === "error" && (
-        <p className="text-red-600 font-medium">Error al enviar. Intenta de nuevo.</p>
+        <p className="text-red-600 font-medium">Error al enviar. Verifica el captcha e intenta de nuevo.</p>
       )}
       <button
         type="submit"
