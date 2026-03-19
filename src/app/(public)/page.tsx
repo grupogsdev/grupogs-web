@@ -58,7 +58,7 @@ export default async function Home() {
               Nuestros Servicios
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Te entregamos las mejores soluciones para ti y tu compañía
+              Las mejores soluciones para tu hogar, oficina y compañía pensando en tu bienestar
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -105,7 +105,7 @@ export default async function Home() {
               </p>
               <p className="text-gray-600 mb-6">
                 Más de 14 años de experiencia en control de plagas y lavado de
-                tanques. Cobertura en el Caribe, Bogotá y Panamá. Atención 24/7.
+                tanques. Cobertura en el Caribe colombiano. Atención 24/7.
               </p>
               <Link
                 href="/nosotros"
@@ -125,8 +125,8 @@ export default async function Home() {
                 <p className="text-sm text-gray-600 mt-1">Atención</p>
               </div>
               <div className="p-6 rounded-xl bg-white border border-gray-200 text-center col-span-2">
-                <span className="text-3xl font-bold text-[var(--primary)]">Caribe + Bogotá + Panamá</span>
-                <p className="text-sm text-gray-600 mt-1">Cobertura nacional e internacional</p>
+                <span className="text-3xl font-bold text-[var(--primary)]">Caribe colombiano</span>
+                <p className="text-sm text-gray-600 mt-1">Barranquilla, Cartagena, Sincelejo, Valledupar</p>
               </div>
             </div>
           </div>

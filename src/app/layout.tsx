@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Grupo GS",
   },
   description:
-    "Control de plagas y lavado de tanques. 14+ años. Caribe, Bogotá y Panamá. Cotiza 24/7. #LaSolucion",
+    "Control de plagas y lavado de tanques. 14+ años. Caribe colombiano. Cotiza 24/7. #LaSolucion",
   keywords: ["fumigación Barranquilla", "control plagas Barranquilla", "lavado tanques Barranquilla"],
   robots: { index: true, follow: true },
 };

@@ -28,11 +28,8 @@ const TIPOS = ["Empresa", "Casa", "Apartamento", "Otro"] as const;
 const CIUDADES = [
   "Barranquilla",
   "Cartagena",
-  "Santa Marta",
-  "Montería",
-  "Valledupar",
   "Sincelejo",
-  "Bogotá",
+  "Valledupar",
   "Otra",
 ] as const;
 const FRECUENCIAS = ["Única", "Mensual", "Trimestral", "Anual"] as const;

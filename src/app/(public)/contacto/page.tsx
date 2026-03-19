@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contacto Grupo GS | Fumigación y Lavado Tanques | Barranquilla",
   description:
-    "Cotiza, agenda o consulta. WhatsApp 310 648 8113. Oficinas en Barranquilla, Cartagena, Santa Marta.",
+    "Cotiza, agenda o consulta. WhatsApp 321 8992537. Oficinas en Barranquilla, Cartagena, Sincelejo, Valledupar.",
 };
 
 export default function ContactoPage() {

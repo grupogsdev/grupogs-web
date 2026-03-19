@@ -18,7 +18,7 @@ export default function ServiciosPage() {
             Nuestros Servicios
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl">
-            Te entregamos las mejores soluciones para ti y tu compañía
+            Las mejores soluciones para tu hogar, oficina y compañía pensando en tu bienestar
           </p>
         </div>
       </section>

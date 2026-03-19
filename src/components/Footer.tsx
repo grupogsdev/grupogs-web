@@ -54,8 +54,13 @@ export function Footer() {
             <h4 className="font-semibold text-white mb-4">Contacto</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href={`tel:${SITE.phone.replace(/\s/g, "")}`} className="hover:text-white">
-                  Tel: {SITE.phone}
+                <a href="tel:+573218992537" className="hover:text-white">
+                  Tel: +57 321 8992537
+                </a>
+              </li>
+              <li>
+                <a href="tel:+573137407078" className="hover:text-white">
+                  Tel: +57 313 7407078
                 </a>
               </li>
               <li>
@@ -65,7 +70,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-white"
                 >
-                  WhatsApp: {SITE.phone}
+                  WhatsApp: +57 321 8992537
                 </a>
               </li>
               <li>
@@ -124,7 +129,7 @@ export function Footer() {
             © {currentYear} {SITE.name}. Todos los derechos reservados.
           </p>
           <p className="mt-1 text-xs">
-            Oficinas: Barranquilla · Cartagena · Santa Marta · Montería · Valledupar · Sucre · Guajira · Sincelejo · Bogotá · Panamá
+            Oficinas: Barranquilla · Cartagena · Sincelejo - Sucre · Valledupar - Cesar
           </p>
         </div>
       </div>

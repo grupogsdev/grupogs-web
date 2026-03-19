@@ -79,7 +79,7 @@ export function ChatWidget() {
     } catch {
       setMessages((m) => [
         ...m,
-        { role: "assistant", content: "Lo siento, no pude procesar tu mensaje. Intenta de nuevo o contacta al +57 310 648 8113." },
+        { role: "assistant", content: "Lo siento, no pude procesar tu mensaje. Intenta de nuevo o contacta al +57 321 8992537." },
       ]);
     } finally {
       setLoading(false);

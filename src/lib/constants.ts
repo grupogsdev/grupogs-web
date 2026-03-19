@@ -7,12 +7,12 @@ export const SITE = {
   shortName: "Grupo GS",
   slogan: "#LaSolucion",
   description:
-    "Control de plagas y lavado de tanques. 14+ años. Caribe, Bogotá y Panamá. Atención 24/7.",
+    "Control de plagas y lavado de tanques. 14+ años. Caribe colombiano. Atención 24/7.",
   domain: "grupogscol.com",
   url: "https://grupogscol.com",
   email: "gerencia@grupogscol.com",
-  phone: "+57 310 648 8113",
-  whatsapp: "573106488113",
+  phone: "+57 321 8992537",
+  whatsapp: "573218992537",
   founded: 2011,
   founder: "Dr. Santiago Lozano",
 } as const;
@@ -27,16 +27,10 @@ export const COLORS = {
 } as const;
 
 export const OFFICES = [
-  { city: "Barranquilla", address: "Cll. 72 # 68-145 La Concepción", phone: "+57 310 648 8113" },
-  { city: "Cartagena", address: "Kra. 102 # 36B-25 Los Campanos" },
-  { city: "Santa Marta", address: "Cll. 22 # 17A-20 Los Alcázares" },
-  { city: "Montería", address: "Cll. 22 # 5A-72 El Sabanal" },
-  { city: "Valledupar", address: "Transv. 23 # 18-52 Los Fundadores" },
-  { city: "Sucre", address: "Cra. 5 # 9-16 El Palito" },
-  { city: "Guajira", address: "Predio Playa Rica, Cra. 4 y 5 Palomino" },
-  { city: "Sincelejo", address: "Cobertura" },
-  { city: "Bogotá", address: "Cobertura" },
-  { city: "Panamá", address: "Cobertura" },
+  { city: "Barranquilla", address: "Cll. 72 # 68-145 La Concepción", phone: "+57 321 8992537" },
+  { city: "Cartagena", address: "Kra. 102 # 36B-25 Los Campanos", phone: "+57 313 7407078" },
+  { city: "Sincelejo - Sucre", address: "Cobertura", phone: "+57 321 8992537" },
+  { city: "Valledupar - Cesar", address: "Transv. 23 # 18-52 Los Fundadores", phone: "+57 313 7407078" },
 ] as const;
 
 export const SOCIAL = {
@@ -96,9 +90,9 @@ export const SERVICES = [
     slug: "control-de-plagas",
     title: "Control de Plagas",
     shortDesc:
-      "Controlamos comején, cucarachas, roedores, palomas, zancudos y toda clase de insectos.",
+      "Controlamos comején, cucarachas, roedores, zancudos y toda clase de insectos.",
     description:
-      "Controlamos comején, cucarachas, roedores, palomas, zancudos y toda clase de insectos a través de diferentes técnicas: aspersión, nebulización, termonebulización, gel cucarachida y desratización. Plan de Manejo Integrado de Plagas (MIP) documentado.",
+      "Controlamos comején, cucarachas, roedores, zancudos y toda clase de insectos a través de diferentes técnicas: aspersión, nebulización, termonebulización, gel cucarachida y desratización. Plan de Manejo Integrado de Plagas (MIP) documentado.",
     techniques: ["Aspersión", "Nebulización", "Termonebulización", "Gel cucarachida", "Desratización", "Plan MIP"],
   },
   {
@@ -106,7 +100,7 @@ export const SERVICES = [
     title: "Lavado de Tanques",
     shortDesc: "Lavado y desinfección de tanques de agua potable. Decreto 1575/2007.",
     description:
-      "Lavado y desinfección de tanques de agua potable subterráneos, elevados y pozos sépticos. Cumplimiento decreto 1575/2007 del Ministerio de Salud.",
-    techniques: ["Tanques subterráneos y elevados", "Desinfección certificada", "Decreto 1575/2007", "Pozos sépticos"],
+      "Lavado y desinfección de tanques de agua potable subterráneos y elevados. Cumplimiento decreto 1575/2007 del Ministerio de Salud.",
+    techniques: ["Tanques subterráneos y elevados", "Desinfección certificada", "Decreto 1575/2007"],
   },
 ] as const;

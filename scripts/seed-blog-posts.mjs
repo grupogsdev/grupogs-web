@@ -33,7 +33,7 @@ const POSTS = [
     slug: "prevencion-control-plagas-hogar-empresa-barranquilla",
     title: "Prevención y Control de Plagas en Hogares y Empresas | Guía 2025",
     excerpt: "Guía completa de prevención y control de plagas en Barranquilla y el Caribe. Consejos de Grupo GS, 14+ años de experiencia. Fumigación, nebulización y Plan MIP.",
-    content: `¿Buscas prevenir plagas en tu hogar o empresa? En Grupo GS te compartimos las mejores prácticas de control de plagas basadas en más de 14 años de experiencia en Barranquilla, el Caribe colombiano, Bogotá y Panamá.
+    content: `¿Buscas prevenir plagas en tu hogar o empresa? En Grupo GS te compartimos las mejores prácticas de control de plagas basadas en más de 14 años de experiencia en Barranquilla y el Caribe colombiano.
 
 ## ¿Por qué es importante el control de plagas?
 
@@ -60,9 +60,9 @@ En Grupo GS Servicios Empresariales SAS manejamos:
 - Control de comején
 - Gel cucarachida (bajo impacto)
 
-Cobertura: Barranquilla, Cartagena, Santa Marta, Montería, Valledupar, Sincelejo, Bogotá y Panamá. Atención 24/7.
+Cobertura: Barranquilla, Cartagena, Sincelejo, Valledupar. Atención 24/7.
 
-¿Necesitas una cotización? Contáctanos por WhatsApp +57 310 648 8113 o solicita tu cotización en nuestra web. #LaSolucion`,
+¿Necesitas una cotización? Contáctanos por WhatsApp +57 321 8992537 o solicita tu cotización en nuestra web. #LaSolucion`,
     published: "published",
   },
   {
@@ -96,13 +96,13 @@ En Barranquilla, Cartagena y Santa Marta el clima favorece la proliferación de 
 5. Llenado y cloración final
 6. Entrega de certificado de servicio
 
-Ofrecemos lavado de tanques subterráneos, elevados y pozos sépticos.
+Ofrecemos lavado de tanques subterráneos y elevados.
 
 ## ¿Por qué elegir Grupo GS para lavado de tanques?
 
 - Más de 14 años de experiencia
 - Cumplimiento total del Decreto 1575
-- Cobertura en Caribe, Bogotá y Panamá
+- Cobertura en Caribe colombiano
 - Atención 24/7
 - Documentación y certificados
 
@@ -113,7 +113,7 @@ Solicita tu cotización de lavado de tanques. Garantizamos agua segura para tu f
     slug: "fumigacion-barranquilla-control-plagas-caribe-profesional",
     title: "Fumigación en Barranquilla y el Caribe: Servicio Profesional de Control de Plagas",
     excerpt: "Fumigación profesional en Barranquilla, Cartagena, Santa Marta y el Caribe. Grupo GS, 14+ años. Cucarachas, roedores, comején. Cotiza 24/7.",
-    content: `¿Problemas de plagas en Barranquilla, Cartagena o Santa Marta? El clima cálido del Caribe colombiano favorece la aparición de cucarachas, roedores, comején, zancudos y palomas. La fumigación profesional es la solución efectiva.
+    content: `¿Problemas de plagas en Barranquilla, Cartagena o Santa Marta? El clima cálido del Caribe colombiano favorece la aparición de cucarachas, roedores, comején y zancudos. La fumigación profesional es la solución efectiva.
 
 ## Plagas más comunes en el Caribe colombiano
 
@@ -124,8 +124,6 @@ Solicita tu cotización de lavado de tanques. Garantizamos agua segura para tu f
 **Comején**: Daña estructuras de madera. Requiere inspección y tratamiento especializado.
 
 **Zancudos**: Dengue, zika y chikungunya. Nebulización y control de criaderos.
-
-**Palomas**: Excrementos corrosivos y ácaros. Control con métodos éticos.
 
 ## Técnicas de fumigación que utilizamos
 
@@ -146,16 +144,13 @@ Oficinas y cobertura en:
 - Valledupar
 - Sincelejo
 - Sucre y Guajira
-- Bogotá
-- Panamá
-
 Atención 24/7. Más de 14 años como Grupo GS Servicios Empresariales SAS.
 
 ## Cotiza tu fumigación
 
 No esperes a que la plaga se multiplique. Solicita tu cotización sin compromiso. Te respondemos en menos de 24 horas.
 
-Teléfono y WhatsApp: +57 310 648 8113
+Teléfono y WhatsApp: +57 321 8992537
 
 #LaSolucion para tu hogar y empresa.`,
     published: "published",
